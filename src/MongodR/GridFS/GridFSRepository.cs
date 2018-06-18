@@ -9,7 +9,7 @@ namespace MongodR.GridFS
 {
     public class GridFsRepository : IGridFsRepository
     {
-        public GridFSBucket GridFsBucket;
+        public GridFSBucket GridFsBucket { get; }
 
         public GridFsRepository(IUnitOfWork unitOfWork)
         {

@@ -8,7 +8,7 @@ namespace MongodR.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        public IMongoCollection<T> Collection;
+        public IMongoCollection<T> Collection { get; }
 
         public Repository(IUnitOfWork unitOfWork)
         {
