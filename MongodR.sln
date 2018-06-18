@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongodR", "src\MongodR\MongodR.csproj", "{4325E65F-8928-419E-B016-F29B4BA30441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongodR.Test", "MongodR.Test\MongodR.Test.csproj", "{9E400E9E-94ED-4D82-90CD-250CB21F8237}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4325E65F-8928-419E-B016-F29B4BA30441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4325E65F-8928-419E-B016-F29B4BA30441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4325E65F-8928-419E-B016-F29B4BA30441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4325E65F-8928-419E-B016-F29B4BA30441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E400E9E-94ED-4D82-90CD-250CB21F8237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E400E9E-94ED-4D82-90CD-250CB21F8237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E400E9E-94ED-4D82-90CD-250CB21F8237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E400E9E-94ED-4D82-90CD-250CB21F8237}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5A9BF42-06CF-4E15-A3AF-356B2689F3AB}
+	EndGlobalSection
+EndGlobal
