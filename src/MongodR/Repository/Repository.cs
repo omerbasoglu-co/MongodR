@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using MongodR.Uow;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -8,14 +10,22 @@ namespace MongodR.Repository
     {
         public IMongoCollection<T> Collection;
 
-        public Repository(IMongoDatabase db)
+        public Repository(IUnitOfWork unitOfWork)
         {
-            Collection = db.GetCollection<T>(typeof(T).Name.ToLower());
+            string collectionName = typeof(T).Name.ToLower();
+
+            if (string.IsNullOrEmpty(collectionName))
+                throw new ArgumentException("Collection name cannot be empty for this entity");
+
+            Collection = unitOfWork.Database.GetCollection<T>(collectionName);
         }
 
-        public Repository(IMongoDatabase db, string tableName)
+        public Repository(IUnitOfWork unitOfWork, string collectionName)
         {
-            Collection = db.GetCollection<T>(tableName);
+            if (string.IsNullOrEmpty(collectionName))
+                throw new ArgumentException("Collection name cannot be empty for this entity");
+
+            Collection = unitOfWork.Database.GetCollection<T>(collectionName);
         }
 
         public T FindById(ObjectId objectId)
